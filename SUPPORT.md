@@ -9,15 +9,15 @@ Thank you for your interest in DaggerTest! This document outlines how to get hel
 If you're experiencing issues with DaggerTest:
 
 1. **Check Documentation**: Review the [README.md](README.md) for setup and usage instructions
-2. **Browse Known Issues**: Check our [Issues](https://github.com/Laserwolve-Games/DaggerTest/issues) page for known problems and solutions
-3. **Community Discussion**: Join discussions in our [Discussions](https://github.com/Laserwolve-Games/DaggerTest/discussions) section
+2. **Browse Known Issues**: Check our [Issues](https://github.com/Vineyard-Technologies/DaggerTest/issues) page for known problems and solutions
+3. **Community Discussion**: Join discussions in our [Discussions](https://github.com/Vineyard-Technologies/DaggerTest/discussions) section
 
 ### Technical Support
 
 For technical issues, bugs, or setup problems:
 
 1. **Search Existing Issues**: Check if your issue has already been reported
-2. **Create a Bug Report**: If you find a new bug, please [open an issue](https://github.com/Laserwolve-Games/DaggerTest/issues/new) with:
+2. **Create a Bug Report**: If you find a new bug, please [open an issue](https://github.com/Vineyard-Technologies/DaggerTest/issues/new) with:
    - Clear description of the problem
    - Steps to reproduce the issue
    - Ruby version and system information
@@ -31,7 +31,7 @@ For questions about contributing to DaggerTest:
 
 1. **Read Contributing Guidelines**: Check our [CONTRIBUTING.md](CONTRIBUTING.md) file
 2. **Code of Conduct**: Review our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
-3. **Start a Discussion**: Ask questions in [Discussions](https://github.com/Laserwolve-Games/DaggerTest/discussions)
+3. **Start a Discussion**: Ask questions in [Discussions](https://github.com/Vineyard-Technologies/DaggerTest/discussions)
 
 ## Contact Information
 
@@ -39,7 +39,7 @@ For questions about contributing to DaggerTest:
 
 - **GitHub Issues**: For bug reports and feature requests
 - **GitHub Discussions**: For general questions and community interaction
-- **Related Projects**: [DaggerQuest](https://github.com/Laserwolve-Games/DaggerQuest) and [DaggerQuest.com](https://github.com/Laserwolve-Games/DaggerQuest.com)
+- **Related Projects**: [DaggerQuest](https://github.com/Vineyard-Technologies/DaggerQuest) and [DaggerQuest.com](https://github.com/Vineyard-Technologies/DaggerQuest.com)
 
 ### Response Times
 
@@ -148,10 +148,10 @@ You can help improve support for everyone:
 
 ## Resources
 
-- **Main Repository**: [DaggerTest](https://github.com/Laserwolve-Games/DaggerTest)
+- **Main Repository**: [DaggerTest](https://github.com/Vineyard-Technologies/DaggerTest)
 - **Tested Applications**: 
-  - [DaggerQuest](https://github.com/Laserwolve-Games/DaggerQuest)
-  - [DaggerQuest.com](https://github.com/Laserwolve-Games/DaggerQuest.com)
+  - [DaggerQuest](https://github.com/Vineyard-Technologies/DaggerQuest)
+  - [DaggerQuest.com](https://github.com/Vineyard-Technologies/DaggerQuest.com)
 - **Selenium Documentation**: [SeleniumHQ](https://selenium.dev/documentation/)
 - **Ruby Documentation**: [Ruby-lang.org](https://www.ruby-lang.org/en/documentation/)
 - **License**: [AGPL-3.0 License](LICENSE)

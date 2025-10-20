@@ -1,40 +1,44 @@
 ![DaggerTest Logo](images/logo.webp)
 
-### A Selenium Ruby testing framework for [*DaggerQuest*](https://github.com/Vineyard-Technologies/DaggerQuest) and [*DaggerQuest.com*](https://github.com/Vineyard-Technologies/DaggerQuest.com).
+### A Playwright JavaScript testing framework for [*DaggerQuest*](https://github.com/Vineyard-Technologies/DaggerQuest) and [*DaggerQuest.com*](https://github.com/Vineyard-Technologies/DaggerQuest.com).
 
 ## 🛠️ Setup & Development
 
 ### Prerequisites
-- Ruby (version 2.7 or higher)
-- Bundler gem
-- A web browser (Chrome, Firefox, or Edge)
+- Node.js (version 18.0 or higher)
+- npm (comes with Node.js)
+- A web browser (Chrome, Firefox, Edge, or Safari)
 
 ### Installation
 1. Clone this repository
-2. Run the setup script:
+2. Install dependencies:
+   ```bash
+   npm install
    ```
-   ruby setup.rb
-   ```
-   Or manually install dependencies:
-   ```
-   bundle install
-   ```
+   This will automatically install Playwright browsers via the `postinstall` script.
 
 ## 🚀 Running Tests
-- Run all tests: `bundle exec rspec`
-- Run basic DaggerQuest.com test: `bundle exec rake basic`
-- Run with detailed output: `bundle exec rspec --format documentation`
+- **Run all tests**: `npm test`
+- **Run basic DaggerQuest.com test**: `npm run test:basic`
+- **Run with visible browser**: `npm run test:headed`
+- **Interactive UI mode**: `npm run test:ui`
+- **Debug mode**: `npm run test:debug`
+- **View test reports**: `npm run test:report`
 
 ## 📁 Test Structure
-- `spec/` - Contains all test files
-- `spec/spec_helper.rb` - Test configuration and helper methods
-- `spec/daggerquest_basic_spec.rb` - Basic navigation and URL verification test
+- `tests/` - Contains all test files
+- `tests/test-helpers.js` - Test utilities and helper functions
+- `tests/daggerquest-basic.spec.js` - Basic navigation and URL verification tests
+- `playwright.config.js` - Playwright configuration and browser settings
 
 ## 🌐 Browser Support
-The framework automatically detects and uses the default browser on your system:
-1. Tries Chrome first
-2. Falls back to Firefox if Chrome is not available
-3. Falls back to Edge if neither Chrome nor Firefox are available
+Playwright supports multiple browsers out of the box:
+- **Chromium** (Chrome/Edge)
+- **Firefox** 
+- **WebKit** (Safari)
+- Cross-platform testing (Windows, macOS, Linux)
+
+The framework runs tests across all configured browsers by default. You can target specific browsers using the `--project` flag.
 
 ### 📋 Related Repositories
 

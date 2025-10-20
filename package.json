@@ -1,0 +1,40 @@
+{
+  "name": "daggertest",
+  "version": "1.0.0",
+  "description": "A Playwright JavaScript testing framework for DaggerQuest and DaggerQuest.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:basic": "playwright test tests/daggerquest-basic.spec.js",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "install": "npm install && playwright install",
+    "postinstall": "playwright install"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "selenium",
+    "daggerquest",
+    "e2e",
+    "automation"
+  ],
+  "author": "Vineyard Technologies",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vineyard-Technologies/DaggerTest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vineyard-Technologies/DaggerTest/issues"
+  },
+  "homepage": "https://github.com/Vineyard-Technologies/DaggerTest#readme"
+}

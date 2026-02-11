@@ -1,6 +1,6 @@
 # Support
 
-Thank you for your interest in DaggerTest! This document outlines how to get help and support for the Selenium Ruby testing framework.
+Thank you for your interest in DaggerTest! This document outlines how to get help and support for the Playwright JavaScript testing framework.
 
 ## Getting Help
 
@@ -20,8 +20,8 @@ For technical issues, bugs, or setup problems:
 2. **Create a Bug Report**: If you find a new bug, please [open an issue](https://github.com/Vineyard-Technologies/DaggerTest/issues/new) with:
    - Clear description of the problem
    - Steps to reproduce the issue
-   - Ruby version and system information
-   - Browser and WebDriver versions
+   - Node.js/npm version and system information
+   - Browser versions
    - Complete error messages and stack traces
    - Test code that reproduces the issue
 
@@ -53,9 +53,9 @@ For questions about contributing to DaggerTest:
 ### Supported Platforms
 
 - **Operating Systems**: Windows, macOS, Linux
-- **Ruby Versions**: 2.7 or higher
-- **Browsers**: Chrome, Firefox, Edge (with appropriate WebDrivers)
-- **WebDriver**: Selenium WebDriver 4.x
+- **Node.js Versions**: 18.0 or higher
+- **Browsers**: Chrome, Firefox, WebKit/Safari (via Playwright)
+- **Test Framework**: Playwright
 
 ### What's Included
 
@@ -68,7 +68,7 @@ For questions about contributing to DaggerTest:
 ### What's Not Included
 
 - Custom test development for third-party projects
-- Support for unsupported Ruby versions
+- Support for unsupported Node.js versions
 - Browser-specific issues not related to the framework
 - Performance tuning for specific environments
 - Real-time debugging assistance
@@ -77,16 +77,16 @@ For questions about contributing to DaggerTest:
 
 ### Prerequisites
 
-- **Ruby**: Version 2.7 or higher
-- **Bundler**: For dependency management
-- **Web Browser**: Chrome, Firefox, or Edge
+- **Node.js**: Version 18.0 or higher
+- **npm**: Package manager (comes with Node.js)
+- **Web Browser**: Chrome, Firefox, Edge, or Safari
 - **Internet Connection**: For downloading dependencies and running tests
 
 ### Installation Requirements
 
-- Administrative privileges may be required for WebDriver installation
-- Sufficient disk space for browser drivers and dependencies
-- Network access to GitHub and RubyGems
+- Administrative privileges may be required for Playwright browser installation
+- Sufficient disk space for browser binaries and dependencies
+- Network access to GitHub and npm registry
 
 ## Community Guidelines
 
@@ -102,27 +102,27 @@ When seeking support:
 
 ### Setup Issues
 
-**Q: Ruby installation fails**
-- Ensure you're using a supported Ruby version (2.7+)
+**Q: Node.js installation fails**
+- Ensure you're using a supported Node.js version (18.0+)
 - Check system PATH configuration
-- Try using a Ruby version manager (rbenv, RVM)
+- Try using a Node.js version manager (nvm)
 
-**Q: Bundle install fails**
+**Q: npm install fails**
 - Check internet connectivity
-- Ensure Bundler is installed: `gem install bundler`
-- Try updating RubyGems: `gem update --system`
+- Clear npm cache: `npm cache clean --force`
+- Try deleting node_modules and package-lock.json, then reinstall
 
 ### WebDriver Issues
 
-**Q: Browser driver not found**
-- Run the setup script: `ruby setup.rb`
-- Manually download drivers and add to PATH
-- Check browser version compatibility
+**Q: Playwright browsers not installed**
+- Run: `npx playwright install`
+- Ensure sufficient disk space
+- Check internet connectivity
 
 **Q: Tests fail to start browser**
-- Ensure browser is installed and up-to-date
-- Check WebDriver version compatibility
-- Verify system PATH includes driver location
+- Ensure Playwright browsers are installed
+- Run `npx playwright install` to download browsers
+- Check system requirements for browser binaries
 
 ### Test Execution Issues
 
@@ -152,8 +152,8 @@ You can help improve support for everyone:
 - **Tested Applications**: 
   - [DaggerQuest](https://github.com/Vineyard-Technologies/DaggerQuest)
   - [DaggerQuest.com](https://github.com/Vineyard-Technologies/DaggerQuest.com)
-- **Selenium Documentation**: [SeleniumHQ](https://selenium.dev/documentation/)
-- **Ruby Documentation**: [Ruby-lang.org](https://www.ruby-lang.org/en/documentation/)
+- **Playwright Documentation**: [playwright.dev](https://playwright.dev)
+- **Node.js Documentation**: [nodejs.org](https://nodejs.org/docs)
 - **License**: [AGPL-3.0 License](LICENSE)
 
 ## Troubleshooting Commands
@@ -161,21 +161,23 @@ You can help improve support for everyone:
 ### Common Diagnostic Commands
 
 ```bash
-# Check Ruby version
-ruby --version
+# Check Node.js version
+node --version
 
-# Check installed gems
-bundle list
+# Check npm version
+npm --version
 
-# Verify browser installations
-which chrome
-which firefox
+# Check installed packages
+npm list
 
-# Run setup script
-ruby setup.rb
+# Check Playwright version
+npx playwright --version
+
+# List installed browsers
+npx playwright list
 
 # Run tests with verbose output
-bundle exec rspec --format documentation
+npm test
 ```
 
 ---

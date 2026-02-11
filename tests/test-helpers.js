@@ -1,16 +1,14 @@
 /**
  * Test utilities and helper functions for DaggerQuest testing
- * Converted from Ruby spec_helper.rb to JavaScript/Playwright
  */
 
 /**
  * Browser detection and setup utility
- * Mimics the Ruby setup_driver function behavior
  */
 export class BrowserHelper {
   /**
    * Attempts to detect and configure the best available browser
-   * Follows the same priority as Ruby version: Chrome -> Firefox -> Edge
+   * Priority order: Chrome -> Firefox -> Edge
    */
   static async detectAvailableBrowser() {
     const availableBrowsers = [];
@@ -57,11 +55,11 @@ You may need to run: npm run install:browsers
   }
   
   /**
-   * Gets browser-specific launch options that match Ruby Selenium configuration
+   * Gets browser-specific launch options
    */
   static getBrowserOptions(browserName) {
     const options = {
-      headless: false, // Run headed by default like Ruby version
+      headless: false, // Run headed by default
     };
     
     if (browserName === 'chromium' || browserName === 'Google Chrome') {
@@ -82,18 +80,18 @@ You may need to run: npm run install:browsers
  */
 export class DaggerQuestHelper {
   /**
-   * Waits for page to be fully loaded (matches Ruby wait logic)
+   * Waits for page to be fully loaded
    */
   static async waitForPageLoad(page, timeout = 10000) {
     await page.waitForLoadState('domcontentloaded', { timeout });
     await page.waitForLoadState('networkidle', { timeout: timeout / 2 });
     
-    // Additional check for document ready state (matches Ruby implementation)
+    // Additional check for document ready state
     await page.waitForFunction(() => document.readyState === 'complete', { timeout });
   }
   
   /**
-   * Validates DaggerQuest.com URL (matches Ruby URL validation)
+   * Validates DaggerQuest.com URL
    */
   static validateDaggerQuestUrl(url) {
     const urlPattern = /daggerquest\.com/i;
@@ -104,7 +102,7 @@ export class DaggerQuestHelper {
   }
   
   /**
-   * Validates page title contains DaggerQuest (matches Ruby title validation)
+   * Validates page title contains DaggerQuest
    */
   static validateDaggerQuestTitle(title) {
     if (!title.includes('DaggerQuest')) {
@@ -114,7 +112,7 @@ export class DaggerQuestHelper {
   }
   
   /**
-   * Logs navigation success (matches Ruby console output)
+   * Logs navigation success
    */
   static logNavigationSuccess(url, title) {
     console.log(`Successfully navigated to: ${url}`);

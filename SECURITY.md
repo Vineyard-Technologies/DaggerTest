@@ -24,7 +24,7 @@ We take security vulnerabilities seriously. If you discover a security vulnerabi
 - Description of the vulnerability
 - Potential impact on testing infrastructure
 - Steps to reproduce
-- Ruby/gem version details
+- Node.js/npm version details
 - Any suggested fixes (optional)
 - Your contact information
 
@@ -57,7 +57,7 @@ When contributing to DaggerTest:
 - Never use production credentials in tests
 - Use test-specific data and accounts
 - Secure handling of sensitive test data
-- Follow secure coding practices for Ruby
+- Follow secure coding practices for JavaScript
 - Be cautious with browser automation security
 - Validate and sanitize test inputs
 - Keep dependencies updated
@@ -80,10 +80,10 @@ When contributing to DaggerTest:
 
 ## Dependency Security
 
-- Regularly update Ruby gems
+- Regularly update npm packages
 - Monitor for security advisories
-- Use `bundle audit` to check for vulnerabilities
-- Pin gem versions for stability
+- Use `npm audit` to check for vulnerabilities
+- Pin package versions for stability
 - Review new dependencies for security implications
 
 ## Contact

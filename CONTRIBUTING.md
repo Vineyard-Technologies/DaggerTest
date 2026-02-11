@@ -13,7 +13,7 @@ Thank you for your interest in contributing to DaggerTest! This is the testing f
 
 ## About DaggerTest
 
-DaggerTest is a Ruby-based testing framework that provides:
+DaggerTest is a Playwright JavaScript testing framework that provides:
 
 - Automated testing for DaggerQuest game functionality
 - Web interface testing for DaggerQuest.com
@@ -24,27 +24,26 @@ DaggerTest is a Ruby-based testing framework that provides:
 
 To contribute to DaggerTest:
 
-- Ruby programming knowledge
-- Familiarity with RSpec testing framework
-- Understanding of web automation (Selenium, Capybara, etc.)
+- JavaScript/Node.js programming knowledge
+- Familiarity with Playwright testing framework
+- Understanding of modern web automation
 - Knowledge of HTML5 game testing methodologies
 - Basic understanding of iframe interactions
 
 ## Project Structure
 
-- `spec/` - Test specifications and test cases
-- `Gemfile` - Ruby gem dependencies
-- `Rakefile` - Rake tasks for running tests
-- `setup.rb` - Environment setup script
-- `run_tests.ps1` - PowerShell script for Windows execution
+- `tests/` - Test specifications and test cases
+- `package.json` - Node.js dependencies and scripts
+- `playwright.config.js` - Playwright configuration
+- `tests/test-helpers.js` - Helper functions and utilities
 
 ## Testing Guidelines
 
 ### Writing Tests
 
-- Follow RSpec conventions and best practices
+- Follow Playwright best practices
 - Write clear, descriptive test descriptions
-- Use appropriate matchers and expectations
+- Use appropriate assertions and expectations
 - Include both positive and negative test cases
 - Test edge cases and error conditions
 
@@ -58,7 +57,7 @@ To contribute to DaggerTest:
 
 ## Code Style and Standards
 
-- Follow Ruby style guide conventions
+- Follow JavaScript best practices and conventions
 - Use descriptive variable and method names
 - Write clear comments for complex test logic
 - Keep tests focused and atomic
@@ -81,7 +80,7 @@ When reporting testing issues:
 
 - Describe the expected vs actual test behavior
 - Include test output and error messages
-- Specify Ruby version and gem versions
+- Specify Node.js and Playwright versions
 - Note browser/environment details
 - Provide steps to reproduce the issue
 
@@ -98,18 +97,21 @@ For new testing features:
 
 ### Local Development
 
-```ruby
+```bash
 # Install dependencies
-bundle install
+npm install
 
 # Run all tests
-rake spec
+npm test
 
 # Run specific test file
-rspec spec/daggerquest_basic_spec.rb
+npx playwright test tests/daggerquest-basic.spec.js
 
-# Run tests with specific tags
-rspec --tag @smoke
+# Run tests in UI mode
+npm run test:ui
+
+# Run tests with headed browser
+npm run test:headed
 ```
 
 ### Continuous Integration

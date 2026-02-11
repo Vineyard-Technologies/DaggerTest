@@ -16,7 +16,6 @@
   "keywords": [
     "playwright",
     "testing",
-    "selenium",
     "daggerquest",
     "e2e",
     "automation"
@@ -24,7 +23,7 @@
   "author": "Vineyard Technologies",
   "license": "AGPL-3.0",
   "devDependencies": {
-    "@playwright/test": "^1.40.0"
+    "@playwright/test": "^1.58.2"
   },
   "engines": {
     "node": ">=18.0.0"

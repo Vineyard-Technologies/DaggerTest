@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
 title: "DaggerTest"
-abstract: "A Selenium Ruby testing framework for automated testing of DaggerQuest and DaggerQuest.com, providing comprehensive end-to-end testing capabilities."
+abstract: "A Playwright JavaScript testing framework for automated testing of DaggerQuest and DaggerQuest.com, providing comprehensive end-to-end testing capabilities."
 authors:
   - family-names: "Vineyard Technologies"
     email: "contact@VineyardTechnologies.org"
@@ -10,8 +10,8 @@ repository-code: "https://github.com/Vineyard-Technologies/DaggerTest"
 license: AGPL-3.0
 keywords:
   - "testing"
-  - "selenium"
-  - "ruby"
+  - "playwright"
+  - "javascript"
   - "automation"
   - "e2e-testing"
   - "web-testing"
@@ -21,7 +21,7 @@ version: "1.0.0"
 date-released: "2025-08-20"
 preferred-citation:
   type: software
-  title: "DaggerTest: Selenium Ruby Testing Framework"
+  title: "DaggerTest: Playwright JavaScript Testing Framework"
   authors:
     - family-names: "Vineyard Technologies"
       email: "contact@VineyardTechnologies.org"

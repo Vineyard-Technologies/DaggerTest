@@ -3,38 +3,37 @@ import { BrowserHelper, DaggerQuestHelper } from './test-helpers.js';
 
 /**
  * DaggerQuest.com Basic Test Suite
- * Converted from Ruby RSpec to Playwright JavaScript
  * 
- * This test replicates the functionality of daggerquest_basic_spec.rb
+ * Tests basic navigation and verification of DaggerQuest.com
  */
 test.describe('DaggerQuest.com Basic Test', () => {
   
   test('should navigate to DaggerQuest.com and verify the URL', async ({ page, browserName }) => {
-    // Log browser information (similar to Ruby driver detection)
+    // Log browser information
     console.log(`Running test with browser: ${browserName}`);
     
     try {
       // Navigate to DaggerQuest.com
       await page.goto('https://daggerquest.com');
       
-      // Wait for page to load (matches Ruby wait logic)
+      // Wait for page to load
       await DaggerQuestHelper.waitForPageLoad(page);
       
-      // Verify the URL is DaggerQuest.com (matches Ruby URL validation)
+      // Verify the URL is DaggerQuest.com
       const currentUrl = page.url();
       DaggerQuestHelper.validateDaggerQuestUrl(currentUrl);
       
       // Alternative Playwright assertion (more idiomatic)
       await expect(page).toHaveURL(/daggerquest\.com/i);
       
-      // Verify page title contains DaggerQuest (matches Ruby title validation)
+      // Verify page title contains DaggerQuest
       const pageTitle = await page.title();
       DaggerQuestHelper.validateDaggerQuestTitle(pageTitle);
       
       // Alternative Playwright assertion
       await expect(page).toHaveTitle(/DaggerQuest/);
       
-      // Log success (matches Ruby console output)
+      // Log success
       DaggerQuestHelper.logNavigationSuccess(currentUrl, pageTitle);
       
     } catch (error) {

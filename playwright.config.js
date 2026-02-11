@@ -39,13 +39,13 @@ export default defineConfig({
     video: 'retain-on-failure',
   },
 
-  /* Configure projects for major browsers - matches Ruby setup behavior */
+  /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-        // Match Ruby Chrome options
+        // Chrome launch options
         launchOptions: {
           args: [
             '--no-sandbox',
@@ -77,7 +77,7 @@ export default defineConfig({
     //   use: { ...devices['iPhone 12'] },
     // },
 
-    /* Test against branded browsers - matches Ruby Edge support */
+    /* Test against branded browsers */
     {
       name: 'Microsoft Edge',
       use: { ...devices['Desktop Edge'], channel: 'msedge' },

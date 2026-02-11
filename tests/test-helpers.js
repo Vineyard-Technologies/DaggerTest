@@ -81,10 +81,16 @@ You may need to run: npm run install:browsers
 export class DaggerQuestHelper {
   /**
    * Waits for page to be fully loaded
+   * @param {Page} page - Playwright page object
+   * @param {number} timeout - Timeout in milliseconds
+   * @param {boolean} skipNetworkIdle - Skip waiting for network idle (useful for pages with heavy iframes)
    */
-  static async waitForPageLoad(page, timeout = 10000) {
+  static async waitForPageLoad(page, timeout = 10000, skipNetworkIdle = false) {
     await page.waitForLoadState('domcontentloaded', { timeout });
-    await page.waitForLoadState('networkidle', { timeout: timeout / 2 });
+    
+    if (!skipNetworkIdle) {
+      await page.waitForLoadState('networkidle', { timeout: timeout / 2 });
+    }
     
     // Additional check for document ready state
     await page.waitForFunction(() => document.readyState === 'complete', { timeout });
